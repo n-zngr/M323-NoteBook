@@ -1,0 +1,13 @@
+from functools import reduce
+
+def multipliziere(x, y):
+    return x * y
+
+def produkt_liste(zahlen_liste):
+    if not zahlen_liste:
+        return 1
+    return reduce(multipliziere, zahlen_liste)
+
+zahlen = [1, 2, 3, 4, 5]
+ergebnis = produkt_liste(zahlen)
+print(ergebnis)
